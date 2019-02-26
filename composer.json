@@ -3,7 +3,10 @@
         "sort-packages": true
     },
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=7.1.0",
+        "psr/http-message": "^1.0",
+        "zendframework/zend-diactoros": "^2.1",
+        "zendframework/zend-httphandlerrunner": "^1.1"
     },
     "autoload": {
         "psr-4": {
@@ -15,7 +18,7 @@
         "phpunit/phpunit": "^8.0"
     },
     "scripts": {
-        "serve": "cd public_html && php -S 0.0.0.0.:8888",
+        "serve": "php -S 0.0.0.0:8080 -t public_html",
         "test": "phpunit --colors=always"
     }
 }
